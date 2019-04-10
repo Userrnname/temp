@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<!-- <head>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/default.css" rel="stylesheet" />
+    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <title>学生列表</title>
+</head> -->
+
+<head>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/default.css" rel="stylesheet" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body>
+    <div class="contentDiv">
+
+        <h5> </h5>
+
+        <legend>
+            <strong></strong>
+        </legend>
+        <form enctype="multipart/form-data" action="/uploadFile" method="POST">{% csrf_token %}
+        <!-- {% csrf_token %} -->
+            
+                <!-- <input type="file" name="myfile" /> -->
+            <div class="form-group">
+                <label  class="col-sm-2 control-label">文件:</label>
+                <div class="col-xs-4">
+                    <input type="file" class="form-control"  name="myfile" />
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label  class="col-sm-2 control-label">航程数组:</label>
+                <div class="col-xs-4">
+                    <input type="text" class="form-control"  name="constrait"  />
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label  class="col-sm-2 control-label">退火系数:</label>
+                <div class="col-xs-4">
+                    <input type="text" class="form-control"  name="alpha" />
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label  class="col-sm-2 control-label">初始温度:</label>
+                <div class="col-xs-4">
+                    <input type="text" class="form-control"  name="temprature" />
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-sm-2 control-label">上传:</label>
+                <div class="col-xs-4">
+                    <!-- {% csrf_token %} -->
+                    <input class="btn btn-primary" type="submit" value="上传" />
+                </div>
+            </div>
+        </form>
+        <p>
+            <img src="{{ img }}">
+        </p>
+        <!-- <form action="@{/student/{action(action=action)" method="post" class="form-horizontal"> -->
+        <!-- <form action="/update?id={{ item.id }}" method="POST"> -->
+        <!-- <form action="/add" method="GET">
+            <input type="hidden" name="id" value="student.id" field="student.id" />
+
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label  class="col-sm-2 control-label">学号:</label>
+                <div class="col-xs-4">
+                    <input type="text" class="form-control"  name="id" value="{{ item.id }}" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="student_name" class="col-sm-2 control-label">姓名:</label>
+                <div class="col-xs-4">
+                    <input type="text" class="form-control" id="student_name" name="name" value="{{ item.name }}" />
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="student_age" class="col-sm-2 control-label">年龄:</label>
+                <div class="col-xs-4">
+                    <input type="text" class="form-control" id="student_age" name="age" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="student_gender" class="col-sm-2 control-label">性别:</label>
+                <div class="col-xs-4">
+                    <input type="text" class="form-control" id="student_gender" rows="3" name="gender" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="student_school" class="col-sm-2 control-label">学院:</label>
+                <div class="col-xs-4">
+                    <input type="text" class="form-control" id="student_school" name="school" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="student_major" class="col-sm-2 control-label">专业:</label>
+                <div class="col-xs-4">
+                    <input type="text" class="form-control" id="student_major" name="major" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="student_hobby" class="col-sm-2 control-label">爱好:</label>
+                <div class="col-xs-4">
+                    <input type="text" class="form-control" id="student_hobby" rows="2" name="hobby" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="student_remark" class="col-sm-2 control-label">备注:</label>
+                <div class="col-xs-4">
+                    <input type="text" class="form-control" id="student_remark" rows="2" name="remark" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <input class="btn btn-primary" type="submit" value="提交" />
+                    <input class="btn btn-primary" type="button" value="返回" onclick="history.back()" />
+                    <a class="btn btn-primary" href="/searchall">查询</a>
+                    <input class="btn btn-primary" type="submit" value="提交" />
+                </div>
+            </div>
+        </form> -->
+
+    </div>
+    <!-- <p>{{ rlt </p> -->
+</body>
+
+</html>
